@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #ffffff;
+  --color-text: #000000;
+  --color-text-light: #727272;
+  --color-primary: #8425EA;
+  --color-secondary: #44157C;
+  --color-search-bar: #E9E9EA;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+
+}
+
+.color-gradient {
+  background: linear-gradient(90deg, #8425EA 0%, #44157C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.other-color-gradient {
+  background: linear-gradient(90deg, #44157C 0%, #8425EA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mainheader {
+  background: linear-gradient(90deg, #8425EA 0%, #44157C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mainheader:hover {
+  background: linear-gradient(90deg, #44157C 0%, #8425EA 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transform: scale(1.25);
+  transition: 1s;
+}
+
+.back-gradient {
+  background: linear-gradient(180deg, #8425EA 0%, #44157C 100%);
+}
+
+.user-back-gradient {
+  background: linear-gradient(0deg, rgba(132, 37, 234, 0.75) 0%, rgba(68, 21, 124, 0.75) 100%);
+}
+
+.roboto-thin {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-extralight {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-semibold {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-extrabold {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.anim:hover {
+  transform: scale(1.05);
+  transition: 0.3s;
+}
+
+.nonselectable {
+  user-select: none;
+}
+
+.page-animation {
+  animation: slidein 2s ease-out;
+}
+
+@keyframes slidein {
+  from {
+    filter: blur(16px);
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    filter: none;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.wrapper-animation {
+  animation: wrapper 0.5s ease-out;
+}
+
+@keyframes wrapper {
+  from {
+    filter: blur(8px);
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    filter: none;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.madeby-animation {
+  animation: madeby 0.5s ease-in;
+}
+
+@keyframes madeby {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
