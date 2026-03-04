@@ -99,7 +99,7 @@ function App() {
       </div>
 
       <div className="wrapper ">
-        <div key={location.key} className="wrapper-animation">
+        <div key={location.key}>
           <Routes>
             <Route path="/">
               <Route index element={<HomePage />} />
