@@ -206,8 +206,8 @@ const Account = () => {
           </button>
         </div>
       ) : (
-        <div className=" fixed inset-0 flex items-center justify-center">
-          <button onClick={handleGoogle} className="">
+        <div className="pointer-events-none fixed inset-0 flex items-center justify-center">
+          <button onClick={handleGoogle} className="pointer-events-auto">
             <Button text="Войти с Google" icon="" top={false} />
           </button>
         </div>
