@@ -206,7 +206,7 @@ const Account = () => {
           </button>
         </div>
       ) : (
-        <div className="sm:m-32 m-8 fixed inset-0 flex items-center justify-center">
+        <div className=" fixed inset-0 flex items-center justify-center">
           <button onClick={handleGoogle} className="">
             <Button text="Войти с Google" icon="" top={false} />
           </button>
