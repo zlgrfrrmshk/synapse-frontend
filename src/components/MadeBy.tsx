@@ -2,7 +2,7 @@ import React from "react";
 
 const MadeBy = () => {
   return (
-    <div className="madeby-animation bg-gray-300 p-4 w-full rounded-2xl flex flex-row justify-between">
+    <div className="madeby-animation bg-gray-300 p-4 mt-4 w-full rounded-2xl flex flex-row justify-between">
       <div>
         Made by{" "}
         <a
