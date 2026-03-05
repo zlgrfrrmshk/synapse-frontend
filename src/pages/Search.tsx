@@ -3,6 +3,7 @@ import User from "../components/User";
 import axios from "axios";
 import Button from "../components/Button";
 import Post from "../components/Post";
+import { Link } from "react-router-dom";
 
 const Search = () => {
   const [ids, setIds] = useState<string[]>([]);
@@ -36,6 +37,9 @@ const Search = () => {
   return (
     <div className="flex flex-col gap-4">
       <div className="w-full flex flex-row gap-2 items-center">
+        <Link to={`/`} className="flex sm:hidden">
+          <Button text="" icon="home" top={false} />
+        </Link>
         <input
           type="text"
           placeholder="Поиск"
