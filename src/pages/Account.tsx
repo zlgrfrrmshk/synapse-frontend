@@ -119,7 +119,7 @@ const Account = () => {
               type="text"
               onChange={(e) => setUpdatedName(e.target.value)}
               placeholder="Введите новое имя..."
-              className="border-primary border-4 rounded-full h-full"
+              className="border-primary p-1 border-4 rounded-full h-full"
             />
           </div>
           <div className="text-black/50 roboto-bold uppercase nonselectable">
