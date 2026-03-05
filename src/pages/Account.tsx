@@ -96,12 +96,7 @@ const Account = () => {
     setTimeout(() => window.location.reload(), 500);
   };
 
-  const [showMadeBy, setShowMadeBy] = useState(false);
-
-  useEffect(() => {
-    const timer = setTimeout(() => setShowMadeBy(true), 1000);
-    return () => clearTimeout(timer);
-  }, []);
+  
 
   return (
     <div>
@@ -218,7 +213,7 @@ const Account = () => {
         </div>
       )}
 
-      {showMadeBy && <MadeBy />}
+      <MadeBy />
     </div>
   );
 };
