@@ -81,8 +81,8 @@ const NewPost = () => {
   if (!user) return null;
   return (
     <>
-      {user ? (
-        <div className="flex flex-col gap-2">
+      {user ? (user.can_post === false ? <div className="text-red-500">На данный момент, функция публикации постов временно недоступна.</div>
+         : <div className="flex flex-col gap-2">
           <div className="roboto-bold text-2xl">Новый пост</div>
 
           {preview && (
