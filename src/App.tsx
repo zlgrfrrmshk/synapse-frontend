@@ -34,7 +34,7 @@ function App() {
 
         <Link
           to={`/search/`}
-          className="nonselectable flex items-center justify-center absolute left-1/2 -translate-x-1/2 bg-search-bar roboto-regular text-text-light h-full sm:w-48 md:w-84 lg:w-128 rounded-full anim cursor-pointer"
+          className="nonselectable flex items-center justify-center absolute left-1/2 -translate-x-1/2 bg-white roboto-regular text-text-light h-full sm:w-48 md:w-84 lg:w-128 rounded-full anim cursor-pointer"
         >
           <div>Поиск</div>
         </Link>
@@ -76,7 +76,7 @@ function App() {
 
         <Link
           to={`/search/`}
-          className="nonselectable flex items-center justify-center bg-search-bar roboto-regular text-text-light h-full w-full rounded-full anim cursor-pointer"
+          className="nonselectable flex items-center justify-center bg-white roboto-regular text-text-light h-full w-full rounded-full anim cursor-pointer"
         >
           <div>Поиск</div>
         </Link>
