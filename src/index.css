@@ -9,10 +9,17 @@
   --color-search-bar: #E9E9EA;
 }
 
+html {
+  height: 100%; 
+}
+
 body {
   margin: 0;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
-
+  background: linear-gradient(#FFFFFF, #7A5CE6);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
 }
 
 .color-gradient {
@@ -34,6 +41,8 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  transition: transform 1s ease-out;
 }
 
 .mainheader:hover {
@@ -42,7 +51,10 @@ body {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   transform: scale(1.25);
-  transition: 1s;
+}
+
+.mainheader:active {
+  transform: scale(0.9);
 }
 
 .back-gradient {
@@ -107,9 +119,17 @@ body {
   font-style: normal;
 }
 
+.anim {
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease-out;
+}
+
 .anim:hover {
   transform: scale(1.05);
-  transition: 0.3s;
+}
+
+.anim:active {
+  transform: scale(0.9);
 }
 
 .nonselectable {
@@ -161,4 +181,21 @@ body {
   to {
     opacity: 1;
   }
+}
+
+.glass-container {
+  background-color: rgba(255, 255, 255, 0.25);
+  @apply border-2 border-primary rounded-2xl;
+  backdrop-filter: blur(20px);
+  padding: 12px;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.5), inset 0px 0px 16px rgba(255, 255, 255, 1);
+  transition: background-color 0.25s ease-out;
+}
+
+.glass-container:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.post-image {
+  box-shadow: 0px 0px 16px 2px rgba(0, 0, 0, 0.5);
 }
