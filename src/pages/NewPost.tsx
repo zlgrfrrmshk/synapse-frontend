@@ -112,7 +112,7 @@ const NewPost = () => {
           )}
 
           <textarea
-            className="bg-search-bar p-4 rounded-2xl w-full max-w-160 min-h-32"
+            className="p-4 rounded-2xl w-full max-w-160 min-h-32 glass-container"
             placeholder="Текст публикации"
             value={caption}
             onChange={(e) => setCaption(e.target.value)}
