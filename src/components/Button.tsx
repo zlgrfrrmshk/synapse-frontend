@@ -9,6 +9,7 @@ interface ChildProps {
 const Button: React.FC<ChildProps> = ({ text, icon, top }) => {
   return (
     <div
+      style={{ boxShadow: `inset 0px 0px 8px rgba(255, 255, 255, 1)`}}
       className={`nonselectable flex items-center justify-center back-gradient p-2 text-white rounded-full roboto-semibold cursor-pointer flex-row gap-1 ${top && "w-10 h-10"} ${!top && "anim"}`}
     >
       {icon == "plus" && (
