@@ -10,16 +10,14 @@ import NewPostPage from "./pages/NewPost";
 import SearchPage from "./pages/Search";
 import ViewPostPage from "./pages/ViewPost";
 import DefaultAvatar from "../src/assets/default-user-avatar.png";
+import { useUserStore } from "./store";
 
 function App() {
-  const [user, setUser] = useState<any>(null);
+  const user = useUserStore(s => s.user);
+  const checkAuth = useUserStore(s => s.checkAuth);
 
-  useEffect(() => {
-    axios
-      .get("/api/auth/me", { withCredentials: true })
-      .then((res) => setUser(res.data))
-      .catch(() => setUser(null));
-  }, []);
+  useState(() => checkAuth())
+
   const location = useLocation();
   return (
     <div className="w-full sm:p-10 p-5 flex flex-col gap-4 ">
