@@ -207,7 +207,7 @@ const Post = ({ id }: { id: string }) => {
         />
       </button>
 
-      {photoPreview && (
+      {photoPreview && (createPortal(
         <div
           className="madeby-animation fixed inset-0 bg-black/50 z-50 flex items-center justify-center"
           onClick={() => setPhotoPreview(false)}
@@ -237,8 +237,7 @@ const Post = ({ id }: { id: string }) => {
               />
             </svg>
           </button>
-        </div>
-      )}
+        </div>, document.body))}
     </div>
   );
 };
