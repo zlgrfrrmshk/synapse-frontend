@@ -4,12 +4,13 @@ import { Link, useNavigate } from "react-router-dom";
 import DefaultAvatar from "../assets/default-user-avatar.png";
 import Button from "./Button";
 import { createPortal } from "react-dom";
+import { useUserStore } from "../store";
 
 const Post = ({ id }: { id: string }) => {
   const [post, setPost] = useState<any>(null);
   const [liked, setLiked] = useState(false);
   const [postLikes, setPostLikes] = useState<any>(null);
-  const [myId, setMyId] = useState<string | null>(null);
+  const myId = useUserStore(s => s.user?.id)
 
   const navigate = useNavigate();
 
@@ -21,16 +22,12 @@ const Post = ({ id }: { id: string }) => {
     Promise.all([
       axios.get(`/api/post/get/${id}`),
       axios.get(`/api/post/isliked/${id}`, { withCredentials: true }),
-      axios
-        .get("/api/auth/me", { withCredentials: true })
-        .catch(() => ({ data: null })),
     ])
-      .then(([postRes, likedRes, meRes]) => {
+      .then(([postRes, likedRes]) => {
         clearTimeout(timeout);
         setPost(postRes.data);
         setPostLikes(Number(postRes.data.likes));
         setLiked(likedRes.data.liked);
-        setMyId(meRes.data?.id || null);
       })
       .catch(() => {
         clearTimeout(timeout);
