@@ -107,7 +107,7 @@ const Post = ({ id }: { id: string }) => {
   if (!post) return null;
 
   return (
-    <div className="flex flex-col gap-2 w-full sm:max-w-160">
+    <div className="flex flex-col gap-2 w-full sm:max-w-160 glass-container">
       <div className="flex flex-row gap-2 items-center">
         <Link
           to={`/user/${post.user_id}`}
@@ -195,7 +195,7 @@ const Post = ({ id }: { id: string }) => {
           src={`/storage/photos/${post.photo}`}
           onClick={() => setPhotoPreview(true)}
           alt={`Фото к посту ${post.caption}`}
-          className="w-full sm:w-auto  rounded-xl cursor-pointer "
+          className="w-full sm:w-auto post-image rounded-xl cursor-pointer "
         />
       )}
       <div className="roboto-medium break-words max-w-96">{post.caption}</div>
