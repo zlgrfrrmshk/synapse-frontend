@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import DefaultAvatar from "../assets/default-user-avatar.png";
 import Button from "./Button";
+import { createPortal } from "react-dom";
 
 const Post = ({ id }: { id: string }) => {
   const [post, setPost] = useState<any>(null);
@@ -165,8 +166,7 @@ const Post = ({ id }: { id: string }) => {
           </button>
         )}
 
-        {confirmDeletePopup && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
+        {confirmDeletePopup && (createPortal(<div className="fixed inset-0 flex items-center justify-center bg-black/50 z-50">
             <div className="bg-white rounded-2xl p-6 flex flex-col gap-4">
               <div className="roboto-bold text-xl">Удалить пост?</div>
               <div className="text-black/50">Это действие нельзя отменить.</div>
@@ -182,7 +182,7 @@ const Post = ({ id }: { id: string }) => {
                 </button>
               </div>
             </div>
-          </div>
+          </div>, document.body)
         )}
         <div className="roboto-regular">{timeAgo(post.created_at)}</div>
 
